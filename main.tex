@@ -5,7 +5,7 @@
 % https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_1):_Basic_Structure
 % https://www.sascha-frank.com/latex-font-size.html
 
-\documentclass[12pt]{report}
+\documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{float}               % graphics float option
@@ -22,6 +22,14 @@
 \usepackage{listings}             % for MATLAB scripts
 
 \usepackage[margin=0.5in]{geometry}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=red,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
 
 \graphicspath{ {images/} }
 
@@ -58,17 +66,15 @@
 
 \begin{document}
    \input{title/title_page.tex}
-   
-   \chapter*{Preface}
-   \input{chapters/preface.tex}
 
    \tableofcontents
-
-   \chapter{This is just the beginning}
-   \input{chapters/chapter1.tex}
-
+   \input{sections/intro.tex}
+   \input{sections/section1.tex}
+   \input{sections/section2.tex}
+   \input{sections/discuss.tex}
+   \input{sections/conclude.tex}
+   \input{reference/reference.tex}
    \appendix
-   \chapter{Some app-end-ix}
-   \input{appendix/appendix_A.tex}
+   \input{appendix/appendixA.tex}
 
 \end{document}
