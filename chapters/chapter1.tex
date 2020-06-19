@@ -1,0 +1,72 @@
+\section{Where do we begin?}
+
+\subsection*{Bold}
+
+\textbf{I am Bold}.
+
+\subsection*{Italic}
+
+\textit{I am Italic}.
+
+\subsection*{Numbered bullet points}
+\begin{enumerate}
+    \item Use this to create your very own latex notes.
+    \item Make sure you have installed necessary latex stuff.
+    \item Have a fun journey!
+\end{enumerate}
+
+\subsection*{Bullet points}
+\begin{itemize}
+    \item To bullet,
+    \item Or not to bullet,
+    \item That is the question.
+\end{itemize}
+
+
+\section{Equations}
+
+\subsection{Fraction}
+
+\begin{equation}
+    \frac{x}{2}+\frac{y}{2}=z
+\end{equation}
+
+\section{Figures and labelling}
+\begin{verbatim}
+    \newfig{caption}{width-size}{figure-path}{labelling}
+\end{verbatim}
+
+\newfig{Mars Rover}{0.5}{MarsRover.jpg}{fig:rover}
+
+\boxeq{
+    \frac{x}{2}+\frac{y}{2}=z
+    \label{eqn:equation1}
+}
+
+
+I am referring to Eqn.\ref{eqn:equation1}.
+
+\section{Coding Snippets}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{showspaces=false,showstringspaces=false}
+
+\begin{lstlisting}[language=C++,
+    keywordstyle=\color{blue}\ttfamily,
+    stringstyle=\color{red}\ttfamily,
+    commentstyle=\color{mygreen}\ttfamily,
+    breaklines=true]
+
+    #include <iostream>
+
+    using namespace;
+    
+    int main() {
+        cout << "Hello world!" << endl;    
+        return 0;
+    }
+
+\end{lstlisting}

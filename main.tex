@@ -1,0 +1,74 @@
+% Created by: Hikari Hashida
+% Date created: March 2020
+% Date last modified: April 2020
+
+% https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_1):_Basic_Structure
+% https://www.sascha-frank.com/latex-font-size.html
+
+\documentclass[12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}               % graphics float option
+\usepackage{cancel}              % strike through
+\usepackage[none]{hyphenat}      % prevent hyphenation
+\usepackage{xcolor}
+\usepackage{tcolorbox}			   % package for colours
+
+\usepackage{amsmath}			      % package for mathematical equations
+\usepackage{amssymb}			      % package for extra mathematical symbols
+
+\usepackage{scalerel}            % for smaller subscripts
+
+\usepackage{listings}             % for MATLAB scripts
+
+\usepackage[margin=0.5in]{geometry}
+
+\graphicspath{ {images/} }
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+% macro for creating boxed equation
+\newcommand{\boxeq}[2]{
+   \centering
+   \begin{tcolorbox}[sharp corners=all, colback=white, colframe=red, text width = 10cm]
+   \ifx&#2&
+      \begin{align*} 
+         #1
+      \end{align*}
+   \else
+      \begin{align} 
+         #1
+      \end{align}
+  \fi
+
+   \end{tcolorbox}
+   \raggedright\setlength{\parindent}{15pt}
+}
+
+% macro for creating new figure
+\newcommand{\newfig}[4]{
+   % \newdig{caption}{width-size}{figure-path}{labelling}
+   \begin{figure} [H]
+      \centering
+      \includegraphics[width=#2\textwidth]{#3}  % size ratio and location
+      \caption{#1}		                        % caption
+      \label{fig:#4}                            % reference name
+   \end{figure}
+}
+
+\begin{document}
+   \input{title/title_page.tex}
+   
+   \chapter*{Preface}
+   \input{chapters/preface.tex}
+
+   \tableofcontents
+
+   \chapter{This is just the beginning}
+   \input{chapters/chapter1.tex}
+
+   \appendix
+   \chapter{Some app-end-ix}
+   \input{appendix/appendix_A.tex}
+
+\end{document}
