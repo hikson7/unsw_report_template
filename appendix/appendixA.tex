@@ -1,4 +1,4 @@
-\section{Where do we begin?}
+\section{Basic latex notations}
 
 \subsection*{Bold}
 
@@ -18,8 +18,7 @@
 \subsection*{Bullet points}
 \begin{itemize}
     \item To bullet,
-    \item Or not to bullet,
-    \item That is the question.
+    \item Or not to bullet.
 \end{itemize}
 
 
@@ -31,42 +30,43 @@
     \frac{x}{2}+\frac{y}{2}=z
 \end{equation}
 
-\section{Figures and labelling}
+\section{Figures}
 \begin{verbatim}
     \newfig{caption}{width-size}{figure-path}{labelling}
 \end{verbatim}
 
 \newfig{Mars Rover}{0.5}{MarsRover.jpg}{fig:rover}
 
+\section{Labelling and referencing}
+
 \boxeq{
     \frac{x}{2}+\frac{y}{2}=z
     \label{eqn:equation1}
 }
 
-
 I am referring to Eqn.\ref{eqn:equation1}.
+
 
 \section{Coding Snippets}
 
-\definecolor{mygreen}{rgb}{0,0.6,0}
-\definecolor{mygray}{rgb}{0.5,0.5,0.5}
-\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\subsection{Script file}
+\lstset{style=code_file}
 
-\lstset{showspaces=false,showstringspaces=false}
-
-\begin{lstlisting}[language=C++,
-    keywordstyle=\color{blue}\ttfamily,
-    stringstyle=\color{red}\ttfamily,
-    commentstyle=\color{mygreen}\ttfamily,
-    breaklines=true]
-
+\begin{lstlisting}[language=C++]
     #include <iostream>
 
-    using namespace;
+    using namespace std;
     
     int main() {
         cout << "Hello world!" << endl;    
         return 0;
     }
 
+\end{lstlisting}
+
+\subsection{Output}
+\lstset{style=output}
+
+\begin{lstlisting}
+Hello world!
 \end{lstlisting}
