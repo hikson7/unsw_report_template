@@ -19,6 +19,8 @@
 
 \usepackage{scalerel}            % for smaller subscripts
 
+\usepackage{array}               % for tables
+
 \usepackage{listings}             % for MATLAB scripts
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -99,7 +101,7 @@
       \centering
       \includegraphics[width=#2\textwidth]{#3}  % size ratio and location
       \caption{#1}		                        % caption
-      \label{fig:#4}                            % reference name
+      \label{#4}                            % reference name
    \end{figure}
 }
 

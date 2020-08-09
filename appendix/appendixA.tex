@@ -1,21 +1,43 @@
-\section{Basic latex notations}
+\section{Basics}
 
-\subsection*{Bold}
+\subsection{Basic notations}
+\lstnewenvironment{TeXlstlisting}{\lstset{language=[LaTeX]TeX}}{}
 
+\lstset{style=output}
+
+\begin{TeXlstlisting}
 \textbf{I am Bold}.
-
-\subsection*{Italic}
-
 \textit{I am Italic}.
+\end{TeXlstlisting}
+\noindent
+\textbf{I am Bold}. \\
+\textit{I am Italic}. \bigskip
 
-\subsection*{Numbered bullet points}
+\subsection{Bullet points}
+
+\subsubsection{enumerate}
+\begin{TeXlstlisting}
+\begin{enumerate}
+    \item Use this to create your very own latex notes.
+    \item Make sure you have installed necessary latex stuff.
+    \item Have a fun journey!
+\end{enumerate}
+\end{TeXlstlisting}
+
 \begin{enumerate}
     \item Use this to create your very own latex notes.
     \item Make sure you have installed necessary latex stuff.
     \item Have a fun journey!
 \end{enumerate}
 
-\subsection*{Bullet points}
+\subsubsection{itemize}
+\begin{TeXlstlisting}
+\begin{itemize}
+    \item To bullet,
+    \item Or not to bullet.
+\end{itemize}
+\end{TeXlstlisting}
+
 \begin{itemize}
     \item To bullet,
     \item Or not to bullet.
@@ -24,20 +46,220 @@
 
 \section{Equations}
 
+\subsection{Types}
+\subsubsection{equation}
+
+\begin{TeXlstlisting}
+\begin{equation*}
+    F = ma
+\end{equation*}
+\end{TeXlstlisting}
+
+\begin{equation*}
+    F = ma
+\end{equation*}
+
+\subsubsection{align}
+
+\begin{TeXlstlisting}
+\begin{align*}
+    F   &= ma \\
+        &= 3\times5 \\
+        &= 15\ [N]
+\end{align*}
+\end{TeXlstlisting}
+
+\begin{align*}
+    F   &= ma \\
+        &= 3\times5 \\
+        &= 15\ [N]
+\end{align*}
+
+\subsubsection{gather}
+
+\begin{TeXlstlisting}
+\begin{gather*}
+    F   = ma \\
+       x = y+z \\
+       z = x-y
+\end{gather*}
+\end{TeXlstlisting}
+
+\begin{gather*}
+    F   = ma \\
+        = 3\times5 \\
+        = 15\ [N]
+\end{gather*}
+
+\subsubsection{Numbering}
+\begin{TeXlstlisting}
+\begin{equation}
+    F = ma 
+\end{equation}
+
+\begin{align}
+    F   &= ma \nonumber \\
+        &= 3\times5 \nonumber \\
+        &= 15\ [N]
+\end{align}
+
+\begin{gather}
+    F   = ma \\
+        x = y+z \\
+        z = x-y
+\end{gather}
+\end{TeXlstlisting}
+
+
+\begin{equation}
+    F = ma 
+\end{equation}
+
+\begin{align}
+    F   &= ma \nonumber \\
+        &= 3\times5 \nonumber \\
+        &= 15\ [N]
+\end{align}
+
+\begin{gather}
+    F   = ma \\
+       x = y+z \\
+       z = x-y
+\end{gather}
+
 \subsection{Fraction}
+
+\begin{TeXlstlisting}
+\begin{equation}
+    \frac{x}{2}+\frac{y}{2}=z
+\end{equation}
+\end{TeXlstlisting}
 
 \begin{equation}
     \frac{x}{2}+\frac{y}{2}=z
 \end{equation}
 
-\section{Figures}
-\begin{verbatim}
-    \newfig{caption}{width-size}{figure-path}{labelling}
-\end{verbatim}
+\subsection{Matrices}
 
+\begin{TeXlstlisting}
+\begin{gather*}
+    R = \begin{bmatrix}
+        0& 0& 0 \\
+        0& 0& 0 \\
+        0& 0& 0
+    \end{bmatrix}
+\end{gather*}
+\end{TeXlstlisting}
+
+\begin{gather*}
+    R = \begin{bmatrix}
+        0& 0& 0 \\
+        0& 0& 0 \\
+        0& 0& 0
+    \end{bmatrix}
+\end{gather*}
+
+\subsection{Notations}
+
+\subsubsection{Cancel}
+
+\begin{TeXlstlisting}
+\begin{equation*}
+    \bcancel{2}\frac{x}{\bcancel{2}}+\frac{\cancel{2y}}{\cancel{2y}}=x
+\end{equation*}
+\end{TeXlstlisting}
+
+\begin{equation*}
+    \bcancel{2}\frac{x}{\bcancel{2}}+\frac{\cancel{2y}}{\cancel{2y}}=x
+\end{equation*}
+
+\subsubsection{Colour}
+
+\begin{TeXlstlisting}
+\begin{equation*}
+    2\textcolor{red}{\cancel{\textcolor{black}{x}}} (z+y) 
+    = 5\cancel{\textcolor{red}{x}}
+\end{equation*}
+\end{TeXlstlisting}
+
+\begin{equation*}
+    2\textcolor{red}{\cancel{\textcolor{black}{x}}} (z+y) = 5\cancel{\textcolor{red}{x}}
+\end{equation*}
+
+\subsubsection{Braces}
+
+\begin{TeXlstlisting}
+\begin{equation*}
+    d.A =  \underbrace{A+A+...+A}_\text{\textit{d}}
+\end{equation*}
+\end{TeXlstlisting}
+
+\begin{equation*}
+    d.A =  \underbrace{A+A+...+A}_\text{\textit{d}}
+\end{equation*}
+
+
+\section{Figures}
+
+\subsection{Insert figures}
+
+\begin{TeXlstlisting}
+\newfig{Mars Rover}{0.5}{MarsRover.jpg}{fig:rover}    
+\end{TeXlstlisting}
 \newfig{Mars Rover}{0.5}{MarsRover.jpg}{fig:rover}
 
+\subsection{Tables}
+
+\begin{TeXlstlisting}
+\begin{tabular} {    |>{\centering\arraybackslash}p{3cm}|
+    |>{\centering\arraybackslash}p{3cm}|
+    >{\centering\arraybackslash}p{3cm}|
+    >{\centering\arraybackslash}p{3cm}|
+    >{\centering\arraybackslash}p{3cm}|  
+                }
+\hline
+\multicolumn{5}{|c|}{DH Parameter for SCARA manipulator} \\
+\hline
+Link \textit{i} & $a_i$ [m] & $\alpha_i$ [deg] & $d_i$ [m] & $\theta_i$ [deg] \\
+\hline
+1 & $a_1$   & 0     & 0     & *$\theta_1$\\
+2 & $a_2$   & 180   & 0     & *$\theta_2$\\
+3 & 0       & 0     & *$d_3$ & 0         \\
+4 & 0       & 0     & $d_4$ & *$\theta_4$\\
+\hline
+\end{tabular}
+\end{TeXlstlisting}
+
+\begin{tabular} {    |>{\centering\arraybackslash}p{3cm}|
+    |>{\centering\arraybackslash}p{3cm}|
+    >{\centering\arraybackslash}p{3cm}|
+    >{\centering\arraybackslash}p{3cm}|
+    >{\centering\arraybackslash}p{3cm}|  
+                }
+\hline
+\multicolumn{5}{|c|}{DH Parameter for SCARA manipulator} \\
+\hline
+Link \textit{i} & $a_i$ [m] & $\alpha_i$ [deg] & $d_i$ [m] & $\theta_i$ [deg] \\
+\hline
+1 & $a_1$   & 0     & 0     & *$\theta_1$\\
+2 & $a_2$   & 180   & 0     & *$\theta_2$\\
+3 & 0       & 0     & *$d_3$ & 0         \\
+4 & 0       & 0     & $d_4$ & *$\theta_4$\\
+\hline
+\end{tabular} \bigskip
+
+
 \section{Labelling and referencing}
+
+\subsection{Referencing}
+\begin{TeXlstlisting}
+\boxeq{
+    \frac{x}{2}+\frac{y}{2}=z
+    \label{eqn:equation1}
+}
+
+I am referring to Eqn.\ref{eqn:equation1}.
+\end{TeXlstlisting}
 
 \boxeq{
     \frac{x}{2}+\frac{y}{2}=z
@@ -46,10 +268,42 @@
 
 I am referring to Eqn.\ref{eqn:equation1}.
 
+\subsection{Footnote}
+
+\begin{TeXlstlisting}
+Time to peak is the time it takes to reach first peak of the output waveform\footnotemark. 
+As we know from calculus, to find a stationary point (peak) of a curve, 
+we need to find $t$ where $\dot{y}(t)=0$. \smallskip
+
+\footnotetext{if its stable and oscillatory. Must be oscillatory as we're looking at a
+ second order system. The amplitude of the output will increase exponentially if its 
+ unstable, that means first peak won't be the maximum peak.}
+\end{TeXlstlisting} \smallskip
+
+Example: (see bottom of this page and notice the footnote). Time to peak is the time it takes to reach first peak of the output waveform\footnotemark. As we know from calculus, to find a stationary point (peak) of a curve, we need to find $t$ where $\dot{y}(t)=0$. \bigskip
+
+\footnotetext{if its stable and oscillatory. Must be oscillatory as we're looking at a second order system. The amplitude of the output will increase exponentially if its unstable, that means first peak won't be the maximum peak.}
 
 \section{Coding Snippets}
 
 \subsection{Script file}
+
+\begin{TeXlstlisting}
+\lstset{style=code_file}
+
+\begin{lstlisting}[language=C++]
+    #include <iostream>
+
+    using namespace std;
+    
+    int main() {
+        cout << "Hello world!" << endl;    
+        return 0;
+    }
+
+\end{lstlisting}
+\end{TeXlstlisting}
+
 \lstset{style=code_file}
 
 \begin{lstlisting}[language=C++]
@@ -67,6 +321,17 @@ I am referring to Eqn.\ref{eqn:equation1}.
 \subsection{Output}
 \lstset{style=output}
 
+\begin{TeXlstlisting}
+\lstset{style=output}
+
 \begin{lstlisting}
 Hello world!
 \end{lstlisting}
+
+\end{TeXlstlisting}
+
+\lstset{style=output}
+
+\begin{TeXlstlisting}
+Hello world!
+\end{TeXlstlisting}
